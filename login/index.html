@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <p>Username</p><input type="text" id="text1">
+        </div>
+        <div class="row">
+            <p>Password</p><input type="password" id="text2">
+        </div>
+        <div class="row">
+            <button onclick="Loginfun()">Login</button>
+            <button onclick="Clearfun()">Clear</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>Full Name: </p>
+            <input type="text" id="uname">
+        </div>
+        <div class="row">
+            <p>UserName: </p>
+            <input type="text" id="usrname">
+        </div>
+        <div class="row">
+            <p>Password: </p>
+            <input type="password" id="pass">
+        </div>
+        <div class="row">
+            <div class="photo">
+                <img src="" alt="" id="userimg">
+            </div>
+            <input type="file">
+        </div>
+        <div class="row">
+            <p>Gender: </p>
+            <input type="radio" id="rdo1" name="gender">
+            <p>Male</p>
+            <input type="radio" id="rdo2" name="gender">
+            <p>Female</p>
+        </div>
+        <div class="row">
+            <button onclick="reg()">Registration</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h3>Welcome page</h3>
+            <div class="photo">
+                <img src="" alt="" id="userimg">
+            </div>
+        </div>
+        <div class="row">
+            <p id="namemsg"></p>
+            <button  >Logout</button>
+        </div>
+        <div class="row">
+            <p>joining Date: </p>
+            <p class="box" id="date"></p>
+        </div>
+        <div class="row">
+            <p>Gender: </p> <p class="box" id="gn"></p>
+        </div>
+
+    </div>
+    
+</body>
+
+<script>
+    function reg()
+    {
+        var n = uname.value;
+        namemsg.innerHTML = n; 
+
+        if(rdo1.checked == true)
+        {
+            gn.innerHTML = "Male";
+        }
+        else if (rdo2.checked == true) {
+            gn.innerHTML = "Female";
+        }
+        else
+        {
+            gn.innerHTML = "please select gender";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        age calculater
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <p>Enter Your Age</p><input type="number" id="age">
+        </div>
+        <button onclick="CalculateAge()">check</button>
+        <div class="row">
+            <P>Your totle Months:</P><P class="box" id="mon"></P>
+        </div>
+        <div class="row">
+            <p>Your totle Weeks:</p><p class="box" id="week"></p>
+        </div>
+        <div class="row">
+            <p>Your totle Days:</p><p class="box" id="day"></p>
+        </div>
+        <div class="row">
+            <p>Your totle Hours:</p><p class="box" id="hrs"></p>
+        </div>
+        <div class="row">
+            <p>Your totle Min:</p><p class="box" id="min"></p>
+        </div>
+        <div class="row">
+            <p>Your totle Sec:</p><p class="box" id="sec"></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>Username</p><input type="text" id="text1">
+        </div>
+        <div class="row">
+            <p>Password</p><input type="password" id="text2">
+        </div>
+        <div class="row">
+            <button onclick="Loginfun()">Login</button>
+            <button onclick="Clearfun()">Clear</button>
+        </div>
+        <div class="row">
+            <p>Username: <span id="usr"></span></p>
+        </div>
+        <div class="row">
+            <p>Password: <span id="pass"></span></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>Enter vlaue</p>
+            <input type="num" id="val">
+            <span>=</span>
+            <p class="box" id="res"></p>
+        </div>
+        <button class="box" onclick="myfun1()">$ to rs</button>
+        <button class="box" onclick="myfun2()">Rs. to $</button>
+        <button class="box" onclick="myfun3()">Cm to Foot</button>
+        <button class="box" onclick="myfun4()">Km to Foot</button>
+        <button class="box" onclick="myfun5()">Pound to Kg</button>
+        <button class="box" onclick="myfun6()">F to C</button>
+        <button class="box" onclick="myfun7()">Exit</button>
+    </div>
+</body>
+<script>
+    function CalculateAge()
+    {
+
+        var a = age.value;
+
+        var m = a*12;
+        var w = a*52;
+        var d = a*365;
+        var h = a*365*12;
+        var mins = a*365*12*60;
+        var s = a*365*12*60*60;
+
+        mon.innerHTML = m + " Months";
+        week.innerHTML = w + " Weeks";
+        day.innerHTML = d + " Days";
+        hrs.innerHTML = h + " Hours";
+        min.innerHTML = mins + " Minuts";
+        sec.innerHTML = s + " Seconds";
+    }
+
+    function Loginfun()
+    {
+        var a = text1.value;
+        var b = text2.value;
+
+        usr.innerHTML = a;
+        pass.innerHTML = b;
+    }
+    function Clearfun()
+    {
+        usr.innerHTML = "";
+        pass.innerHTML = "";
+        text1.value = "";
+        text2.value = "";
+    }
+    function myfun1()
+    {
+        var a = val.value;
+        res.innerHTML = a*83.9;
+        
+    }
+    function myfun2()
+    {
+        var a = val.value;
+        res.innerHTML = a/83.9;
+    }
+    function myfun3()
+    {
+        var a = val.value;
+        res.innerHTML = a*0.032;
+    }
+    function myfun4()
+    {
+        var a = val.value;
+        res.innerHTML = a*3280;
+    }
+    function myfun5()
+    {
+        var a = val.value;
+        res.innerHTML = a*0.45;
+        
+    }
+    function myfun6()
+    {
+        var a = val.value;
+        var b = 5/6;
+        res.innerHTML = (a-32)*b;
+    }
+    function myfun7()
+    {
+        window.close
+    }
+</script>
+</html>

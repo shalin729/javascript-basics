@@ -1,0 +1,96 @@
+.container
+{
+    width: 400px;
+    border: solid 1px black;
+    margin: auto;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.row, .row2
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+ .row2
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+input, .box {
+    height: 20px;
+
+}
+p
+{
+    /* width: 40%; */
+    text-align: start;
+    margin: 5px;
+}
+.icon
+{
+    width: 30px;
+    height: 30px;
+    /* background-color: #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+img
+{
+    /* color: black; */
+    width: 100%;
+    /* position: absolute; */
+    height: 100%;
+}
+button{
+    margin: 10px 0;
+    border: none;
+    background-color: rgb(122, 194, 14);
+    color: white;
+    padding: 15px;
+    width: 30%;
+}
+button:nth-child(3)
+{
+    background-color: red;
+}
+.col
+{
+    padding: 10px 0;
+    width: 100%;
+    background-color: rgb(199, 166, 252);
+    /* color: white; */
+    box-sizing: border-box;
+    
+}
+.col:nth-child(3), .col:nth-child(5)
+{
+    background-color: rgb(247, 170, 247);
+}
+h3
+{
+    color: white;
+    background-color: red;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+.box
+{
+    width: 60%;
+    border: none;
+    border-bottom: solid 2px blue;
+    border-radius: 5px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}

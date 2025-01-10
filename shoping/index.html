@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoping cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row"><h1>Shopping System</h1></div>
+        <div class="row">
+            <p>Enter Customer name:</p><input type="text" id="txt1">
+        </div>
+        <div class="row">
+            <p>Enter Product Name:</p><input type="text" id="txt2">
+        </div>
+        <div class="row">
+            <p>Enter Product Price:</p><input type="number" id="pr">
+        </div>
+        <div class="row">
+            <p>Enter Product QTY:</p><input type="number" id="qty">
+        </div>
+        <div class="row">
+            <button onclick="myfun1()">Submit</button>
+            <button>Clear</button>
+            <button>Exit</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>Total Amount:</p><p class="p" id="ta"></p>
+            
+        </div>
+        <div class="row">
+            <p>Total Discount:</p><p class="p" id="d"></p><p id="ten"></p>
+            
+        </div>
+        <div class="row">
+            <p>Net Price:</p><p class="p" id="n"></p>
+            
+        </div>
+        <div class="row">
+            <p id="msg"></p>
+            
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+
+    function myfun1()
+    {
+        var name = txt1.value;
+        var Product = txt2.value;
+        var prs = parseInt(pr.value);
+        var qt = parseInt(qty.value);
+        // alert(qt*prs);
+        var t = qt*prs;
+
+        ta.innerHTML=t;
+        
+        msg.innerHTML = "thank you for shopping " + name +" Good luck"
+        
+        
+        if(t>=1000)
+        {
+            var parc = t/10;
+            d.innerHTML = parc;
+            var net = t-parc;
+            n.innerHTML = net;
+            
+            ten.innerHTML = "10% discount";
+        }
+        else
+        {
+            d.innerHTML = 0;
+            n.innerHTML = t;
+            ten.innerHTML = "0% discount";
+            n.innerHTML = t;
+        }
+    
+    }
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qna1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <p>Que: 5 x 2 = ?</p>
+        <div class="row">
+            <input type="radio" name="op" id="op1"><p>8</p>
+        </div>
+        <div class="row">
+            <input type="radio" name="op" id="op2"><p>9</p>
+        </div>
+        <div class="row">
+            <input type="radio" name="op" id="op3"><p>10</p>
+        </div>
+        <div class="row">
+            <input type="radio" name="op" id="op4"><p>11</p>
+        </div>
+        <button onclick="chk()">Submit</button>
+        <p id="ans"></p>
+    </div>
+    <div class="container">
+        <h1>Check box</h1>
+        <div class="row">
+            <input type="checkbox" id="ch1"><p id="c">C++</p>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="ch2"><p id="js">Javascript</p>
+        </div>
+        <div class="row">
+            <input type="checkbox" id="ch3"><p id="py">Python</p>
+        </div>
+        <button onclick="fun1()">click</button>
+        <p id="ans2"></p>
+    </div>
+</body>
+<script>
+function chk()
+{
+    
+    if(op1.checked == true)
+{
+    ans.innerHTML = " Ans 8 is wrong ans";
+}
+else if(op2.checked == true)
+{
+    ans.innerHTML = " Ans 9 is wrong ans";
+}
+else if(op3.checked == true)
+{
+    ans.innerHTML = " Ans 10 is Correct ans";
+}
+else if(op4.checked == true)
+{
+    ans.innerHTML = " Ans 11 is wrong ans";
+}
+}
+
+
+function fun1()
+{
+    if(ch1.checked == true)
+    {
+        ans2.innerHTML = " C++";
+    }
+
+    if(ch2.checked == true)
+    {
+        ans2.innerHTML = " JavaScript";
+    }
+
+    if(ch3.checked == true)
+    {
+        ans2.innerHTML = " Python";
+    }
+    if(ch1.checked == true && ch2.checked == true)
+    {
+        ans2.innerHTML = " C++, JavaScript";
+    }
+    if(ch1.checked == true && ch3.checked == true)
+    {
+        ans2.innerHTML = "C++, Python";
+    }
+    if(ch2.checked == true && ch3.checked == true)
+    {
+        ans2.innerHTML = "JavaScript, Python";
+    }
+    if(ch1.checked == true && ch2.checked == true && ch3.checked == true)
+    {
+        ans2.innerHTML = "C++, JavaScript, Python";
+    }
+
+
+
+
+
+}
+
+</script>
+</html>

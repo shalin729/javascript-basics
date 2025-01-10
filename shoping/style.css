@@ -1,0 +1,43 @@
+.container
+{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: solid 1px black;
+    margin: auto;
+    /* gap: 10px; */
+}
+.row
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+h1
+{
+    text-align: center;
+    width: 100%;
+}
+input
+{
+    width: 60%;
+}
+.p
+{
+    border: solid 1px black;
+    width: 70%;
+    height: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+#d
+{
+    width: 30%;
+}
+#ten
+{
+    width: 30%;
+}

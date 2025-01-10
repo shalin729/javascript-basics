@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Marksheet</h1>
+        <div class="row">
+            <p>Enter Marks 1</p><input type="number" id="m1">
+        </div>
+        <div class="row">
+            <p>Enter Marks 2</p><input type="number" id="m2">
+        </div>
+        <div class="row">
+            <p>Enter Marks 3</p><input type="number" id="m3">
+        </div>
+        <div class="row">
+            <p>Enter Marks 4</p><input type="number" id="m4">
+        </div>
+        <div class="row">
+            <p>Enter Marks 5</p><input type="number" id="m5">
+        </div>
+        <div class="row">
+            <button class="btn" onclick=SumMarks()>Submit</button>
+            <button class="btn" onclick=ClearMarks()>Clear</button>
+            <button class="btn" onclick=ExitW()>Exit</button>
+        </div>
+        <h3>Result</h3>
+        <div class="row">
+            <p>Total:-</p>
+            <p class="result" id="sum"></p>
+        </div>
+        <div class="row">
+            <p>Percentage:-</p>
+            <p class="result" id="percentage"></p>
+        </div>
+        <div class="row">
+            <p>Grade:-</p>
+            <p class="result" id="grade"></p>
+        </div>
+        <p id="msg"></p>
+    </div>
+    
+</body>
+<script>
+    function SumMarks()
+    {
+        var mark1=parseInt(m1.value);
+        var mark2=parseInt(m2.value);
+        var mark3=parseInt(m3.value);
+        var mark4=parseInt(m4.value);
+        var mark5=parseInt(m5.value);
+
+        var t=mark1+mark2+mark3+mark4+mark5;
+        sum.innerHTML=t;
+
+        var p = t/5;
+        percentage.innerHTML=p;
+
+        
+if(p>=70)
+{
+    grade.innerHTML="A";
+}
+
+
+else if(p>=60)
+{
+    grade.innerHTML="B";
+}
+else if(p>=50)
+{
+    grade.innerHTML="C";
+}
+else
+{
+    grade.innerHTML="D"
+}
+
+if(t>=250)
+{
+    msg.innerHTMl = "Congratulation you are passd"
+}
+else
+{
+    msg.innerHTML = "Sorry you are Failed"
+}
+}
+function ClearMarks()
+{
+    // alert("hello");
+        m1.value="";
+        m2.value="";
+        m3.value="";
+        m4.value="";
+        m5.value="";
+        msg.value="";
+        grade.value="";
+        percentage.value="";
+}
+function ExitW()
+{
+    window.close();
+}
+</script>
+</html> 

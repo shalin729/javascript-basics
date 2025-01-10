@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <div class="formgroup">
+                <p>Enter the value 1:</p> 
+                <input type="number" id="txt1">
+            </div>
+
+            <div class="formgroup">
+                <p>Enter the value 2:</p> 
+                <input type="number" id="txt2">
+            </div>
+            <div class="formgroup">
+                <button class="btn" onclick="myfun1()">+</button>
+                <button class="btn" onclick="myfun2()">-</button>
+                <button class="btn" onclick="myfun3()">*</button>
+                <button class="btn" onclick="myfun4()">/</button>
+            </div>
+            <div class="formgroup">
+                <p>Result:</p>
+                <p id="lbl1">lable</p>
+            </div>
+            <div class="formgroup">
+                <button class="btn1" onclick="myclear()">clear</button>
+                <button class="btn1" onclick="exit()">exit</button>
+            </div>
+        </div>
+<!--         
+        <div class="box1">
+            <div class="formgroup">
+                <p>Enter the value 1:</p> 
+                <input type="number">
+            </div>
+            <div class="formgroup">
+                <p>Enter the value 2:</p> 
+                <input type="number">
+            </div>
+            <div class="formgroup">
+                <p>Enter the value 3:</p> 
+                <input type="number">
+            </div>
+            <div class="formgroup">
+                <button class="btn2"></button>
+                <button class="btn2">max</button>
+                <button class="btn2">min</button>
+            </div>
+            <div class="formgroup">
+                <p>Result:</p>
+                <p>lable</p>
+            </div>
+        </div> -->
+        <div class="box2"></div>
+    </div>
+    
+</body>
+
+
+<script>
+
+    function myclear()
+    {
+        txt1.value="";
+        txt2.value="";
+        // txt2.value="";
+        lbl1.innerHTML="lable"
+        // alert("clear clicked");
+    }
+    function exit()
+    {
+        // alert("exit clicked");
+        lbl1.innerHTML=0
+        window.close();
+        
+    }
+
+    function myfun1()
+    {
+    var a=parseInt( txt1.value);
+    var b=parseInt( txt2.value);
+    var b=txt2.value
+    
+    var t=a+b;
+    lbl1.innerHTML=t;
+    
+}
+function myfun2()
+{
+    var a=parseInt( txt1.value);
+    var b=parseInt( txt2.value);
+
+    var t=a-b;
+    lbl1.innerHTML=t;
+}
+function myfun3()
+{
+    var a=parseInt( txt1.value);
+    var b=parseInt( txt2.value);
+
+    var t=a*b;
+    lbl1.innerHTML=t;
+}
+function myfun4()
+{
+    var a=parseInt( txt1.value);
+    var b=parseInt( txt2.value);
+
+    var t=a/b;
+    lbl1.innerHTML=t;
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</html>

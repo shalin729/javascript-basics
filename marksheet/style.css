@@ -1,0 +1,66 @@
+.container
+{
+    width: 400px;
+    border: solid 1px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.row
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px ;
+    box-sizing: border-box;
+    align-items: center;
+}
+h1
+{
+    background-color: orange;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+p
+{
+    font-size: 20px;
+    color: red;
+    width: 40%;
+}
+input
+{
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px blue;
+    width: 60%;
+}
+.btn
+{
+    width: 30%;
+    height: 40px;
+    border: none;
+    background-color: rgb(0, 255, 0);
+    cursor: pointer;
+}
+.btn:nth-child(3)
+{
+    background-color: red;
+}
+h3
+{
+    background-color: orange;
+    width: 100%;
+    text-align: center;
+}
+.result
+{
+    border-bottom: solid 1px gray;
+    width: 60%;
+}
+#msg
+{
+    width: 100%;
+    margin: 10px;
+}

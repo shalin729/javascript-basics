@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colo picker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="row">
+            <label for="chk" class="icon" ><i class="fa-solid fa-chevron-down"></i></label>
+        </div>
+        <input type="checkbox" id="chk" name="chk">
+        <div class="toggle">
+            <div class="row1" id="redc"></div>
+            <div class="row1" id="greenc"></div>
+            <div class="row1" id="bluec"></div>
+            <div class="row1" id="yellowc"></div>
+        </div> -->
+
+        <select name="" id="drop1" onchange="fun1()">
+            <option value="url(img-01.jpg)">img1</option>
+            <option value="url(img-02.jpg)">img2</option>
+            <option value="url(img-03.jpg)">img3</option>
+            <option value="url(img-04.jpg)">img4</option>
+        </select>
+        
+    </div>
+    <div class="container">
+        <button onclick="fun1()">Click</button>
+    </div>
+</body>
+<script>
+    function fun1()
+    {
+
+document.body.style.backgroundImage=drop1.value;
+
+    }
+
+</script>
+</html>

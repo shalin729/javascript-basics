@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkbox.css">
+</head>
+<body>
+    <div class="box">
+        <h2>CHECKBOX EXAMPLE</h2>
+        <div class="row">
+            <input type="checkbox" name="" id="check1">C++
+        </div>
+
+        <div class="row">
+            <input type="checkbox" name="" id="check2">PYTHON
+        </div>
+
+        <div class="row">
+            <input type="checkbox" name="" id="check3">ANDROID
+        </div>
+
+        <div class="row">
+            <button onclick="funclick()">CLICK</button>
+        </div>
+
+        <div class="row">
+            <span id="msg"></span>
+        </div>
+    </div>
+</body>
+
+<script>
+
+function funclick()
+{
+
+if(check1.checked==true)
+{
+    msg.innerHTML="C++";
+}
+
+ if(check2.checked==true)
+{
+    msg.innerHTML="PYTHON";
+}
+
+ if(check3.checked==true)
+{
+    msg.innerHTML="ANDROID";
+}
+
+ if(check1.checked==true && check2.checked==true)
+{
+    msg.innerHTML="C++,PYTHON";
+}
+if(check1.checked==true && check3.checked==true)
+{
+    msg.innerHTML="C++,ANDROID";
+}
+if(check2.checked==true && check3.checked==true)
+{
+    msg.innerHTML="PYTHON,ANDROID";
+}
+if(check1.checked==true && check2.checked==true && check3.checked==true)
+{
+    msg.innerHTML="C++,PYTHON,ANDROID";
+}
+
+
+
+}
+
+</script>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qna1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <audio controls autoplay id="ad1">
+        <source src=""/>
+    </audio>
+
+    <div class="container">
+        <h3>ONLINE EXAM</h3>
+        <div class="col">
+            <p>Que 1: 12 + 13 = ?  
+                <!-- <img src="" id="img1" width="50px"
+                height="50px" alt="" srcset="">  -->
+             </p>
+            <div class="row">
+                <div class="row">
+                    <p>A</p>
+                    <input type="radio" name="oop1" id="op1">
+                    <p>21</p>
+                </div>
+                <div class="row">
+                    <p>B</p>
+                    <input type="radio" name="oop1" id="op2">
+                    <p>25</p>
+                </div>
+                <div class="row">
+                    <p>C</p>
+                    <input type="radio" name="oop1" id="op3">
+                    <p>27</p>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <img id="img1" src="" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <p>Que 2: 5 x 12 = ?</p>
+            <div class="row">
+                <div class="row">
+                    <p>A</p>
+                    <input type="radio" name="oop2" id="op4">
+                    <p>60</p>
+                </div>
+                <div class="row">
+                    <p>B</p>
+                    <input type="radio" name="oop2" id="op5">
+                    <p>85</p>
+                </div>
+                <div class="row">
+                    <p>C</p>
+                    <input type="radio" name="oop2" id="op6">
+                    <p>70</p>
+                </div>
+            <div class="row">
+                    <div class="icon">
+                        <img id="img2" src="" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <p>Que 3: 65-10-90 = ?</p>
+            <div class="row">
+                <div class="row">
+                    <p>A</p>
+                    <input type="radio" name="oop3" id="op7">
+                    <p>145</p>
+                </div>
+                <div class="row">
+                    <p>B</p>
+                    <input type="radio" name="oop3" id="op8">
+                    <p>155</p>
+                </div>
+                <div class="row">
+                    <p>C</p>
+                    <input type="radio" name="oop3" id="op9">
+                    <p>135</p>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <img id="img3" src="" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <p>Que 4: 128/8 = ?</p>
+            <div class="row">
+                <div class="row">
+                    <p>A</p>
+                    <input type="radio" name="oop4" id="op10">
+                    <p>24</p>
+                </div>
+                <div class="row">
+                    <p>B</p>
+                    <input type="radio" name="oop4" id="op11">
+                    <p>12</p>
+                </div>
+                <div class="row">
+                    <p>C</p>
+                    <input type="radio" name="oop4" id="op12">
+                    <p>16</p>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <img id="img4" src="" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <p>Que 5: X + 23 = 35 then X = ?</p>
+            <div class="row">
+                <div class="row">
+                    <p>A</p>
+                    <input type="radio" name="oop5" id="op13">
+                    <p>12</p>
+                </div>
+                <div class="row">
+                    <p>B</p>
+                    <input type="radio" name="oop5" id="op14">
+                    <p>16</p>
+                </div>
+                <div class="row">
+                    <p>C</p>
+                    <input type="radio" name="oop5" id="op15">
+                    <p>22</p>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <img id="img5" src="" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <button onclick="chk()">Submit</button>
+            <button onclick="clr()">Clear</button>
+            <button onclick="ext()">Exit</button>
+        </div>
+        <div class="row2">
+
+            <p>Attend: </p>
+            <p class="box" id="lblat"></p>
+
+        </div>
+        <div class="row2">
+
+            <p>UnAttend: </p>
+            <p class="box" id="lblunat"></p>
+
+        </div>
+        <div class="row2">
+
+            <p>Wrong Answer: </p>
+            <p class="box" id="lblwa"></p>
+
+        </div>
+        <div class="row2">
+
+            <p>Right Answer: </p>
+            <p class="box" id="lblra"></p>
+
+        </div>
+        <div class="row2">
+
+            <p>Get Marks: </p>
+            <p class="box" id="lblgm"></p>
+
+        </div>
+        <div class="row2">
+
+            <p>Cut Marks: </p>
+            <p class="box" id="lblcm" ></p>
+
+        </div>
+        <div class="row2">
+
+            <p>Result Marks: </p>
+            <p class="box" id="lblrm"></p>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+<script>
+    function chk() {
+
+    
+        var r = 0, w = 0, at = 0, ut = 0;
+
+
+
+        if (op1.checked == false && op2.checked == false && op3.checked == false) {
+            ut++;
+        }
+        else if (op2.checked == true) {
+            r++;
+            at++;
+           img1.src="check.png";
+           ad1.src = "right.mp3"
+        }
+        else {
+            
+            w++;
+            at++;
+            img1.src = "cross.png";
+            ad1.src = "wrong.mp3"
+        }
+        if (op4.checked == false && op5.checked == false && op6.checked == false) {
+            ut++;
+        }
+        else if (op4.checked == true) {
+            r++;
+            at++;
+            img2.src="check.png";
+            ad1.src = "right.mp3"
+            
+        }
+        else {
+            
+            w++;
+            at++
+            img2.src = "cross.png";
+            ad1.src = "wrong.mp3"
+            
+        }
+        
+        if (op7.checked == false && op8.checked == false && op9.checked == false) {
+            ut++;
+        }
+        else if (op7.checked == true) {
+            r++;
+            at++;
+            img3.src="check.png";
+            ad1.src = "right.mp3"
+            
+        }
+        else {
+            
+            w++;
+            at++;
+            img3.src = "cross.png";
+            ad1.src = "wrong.mp3"
+            
+        }
+        
+        if (op10.checked == false && op11.checked == false && op12.checked == false) {
+            ut++;
+        }
+        else if (op12.checked == true) {
+            r++;
+            at++;
+            img4.src="check.png";
+            ad1.src = "right.mp3"
+            
+        }
+        else {
+            
+            w++;
+            at++;
+            img4.src = "cross.png";
+            ad1.src = "wrong.mp3"
+            
+        }
+        
+        if (op13.checked == false && op14.checked == false && op15.checked == false) {
+            ut++;
+        }
+        else if (op13.checked == true) {
+            r++;
+            at++;
+            img5.src="check.png";
+            ad1.src = "right.mp3"
+            
+        }
+        else {
+            
+            w++;
+            at++;
+            img5.src = "cross.png";
+            ad1.src = "wrong.mp3"
+            
+        }
+        
+        
+
+        
+        lblat.innerHTML=at;
+        lblunat.innerHTML=ut;
+        lblwa.innerHTML=w;
+        lblra.innerHTML=r;
+        lblgm.innerHTML = r*5;
+        lblcm.innerHTML = w*2;
+        lblrm.innerHTML = lblgm.innerHTML - lblcm.innerHTML;
+
+
+    }
+    function clr()
+
+{
+    
+    op1.checked = false;
+    op2.checked = false;
+    op3.checked = false;
+    op4.checked = false;
+    op5.checked = false;
+    op6.checked = false;
+    op7.checked = false;
+    op8.checked = false;
+    op9.checked = false;
+    op10.checked = false;
+    op11.checked = false;
+    op12.checked = false;
+    op13.checked = false;
+    op14.checked = false;
+    op15.checked = false;
+     
+        lblat.innerHTML="";
+        lblunat.innerHTML="";
+        lblwa.innerHTML="";
+        lblra.innerHTML="";
+        lblgm.innerHTML = "";
+        lblcm.innerHTML = "";    
+        lblrm.innerHTML = "";    
+}
+
+function ext()
+{
+    window.close();
+}
+
+
+
+</script>
+
+</html>
