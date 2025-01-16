@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <label id="lbl1"></label>
+        <button onclick="btn1Click()">start</button>
+        <button onclick="btn2Click()">stop</button>
+        <button onclick="btn3click()">reset</button>
+        <!-- <label id="lbl2"></label> -->
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+
+    var count = 0;
+    var timer;
+    var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
+		  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
+		  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
+		  '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
+		  '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
+		  '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+		  '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
+		  '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+		  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
+		  '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];    
+    lbl1.innerHTML = "0";
+    function timerCounter() 
+    {
+        var i = colorArray.length;
+
+        // alert(colorArray[1])
+        count++;
+        lbl1.innerHTML = count;
+
+        if(count == 1)
+    {
+        document.body.style.backgroundColor = "blue";
+    }
+        else if(count == 2)
+    {
+        document.body.style.backgroundColor = '#FF6633';
+    }
+        else if(count == 3)
+    {
+        document.body.style.backgroundColor = '#FFB399';
+    }
+        else if(count == 4)
+    {
+        document.body.style.backgroundColor = '#4D8000';
+    }
+        else if(count == 5)
+    {
+        document.body.style.backgroundColor = '#99E6E6';
+    }
+        else if(count == 6)
+    {
+        document.body.style.backgroundColor = "#80B300";
+    }
+        else if(count == 7)
+    {
+        document.body.style.backgroundColor = '#FF6633';
+    }
+        else if(count == 8)
+    {
+        document.body.style.backgroundColor = '#FF99E6';
+    }
+        else if(count == 9)
+    {
+        document.body.style.backgroundColor = '#4D8000';
+    }
+        else if(count == 10)
+    {
+        document.body.style.backgroundColor = '#99E6E6';
+    }
+        else if(count == 11)
+    {
+        document.body.style.backgroundColor = "blue";
+    }
+        else if(count == 12)
+    {
+        document.body.style.backgroundColor = '#FF6633';
+    }
+        else if(count == 13)
+    {
+        document.body.style.backgroundColor = '#FFB399';
+    }
+        else if(count == 14)
+    {
+        document.body.style.backgroundColor = '#4D8000';
+    }
+        else if(count == 15)
+    {
+        document.body.style.backgroundColor = '#99E6E6';
+    }
+        
+    }
+    
+    
+    function btn1Click() 
+    {
+        if(count <= 15)
+        {
+            timer = setInterval(timerCounter, 500);
+        }
+    }
+       
+
+
+    function btn2Click() 
+    {
+        clearInterval(timer);
+    }
+
+    function btn3click() 
+    {
+        clearInterval(timer);
+        lbl1.innerHTML = "0";
+        lbl2.innerHTML = "0";
+        count = 0;
+        lbl=[];
+    }
+
+    
+
+
+
+</script>
+</html>

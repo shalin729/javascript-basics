@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <p><label id="hour">00</label>Hour</p>
+        <p><label id="min">00</label>Min</p>
+        <p><label id="sec">00</label>Sec</p>
+        <p><label id="msec">00</label>MS</p>
+      </div>
+      <div class="row">
+        <button onclick="startbtn()">Start</button>
+        <button onclick="stopbtn()">Stop</button>
+        <button onclick="resetbtn()">Reset</button>
+        <button onclick="lapbtn()">Lap</button>
+      </div>
+
+      <label id="lbl2"></label>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var num = 0;
+    var hour = 0,
+      min = 0,
+      sec = 0,
+      ms = 0;
+    var htimer, mintimer, sectimer, mstimer;
+
+    function hourcount() {
+      hour++;
+      if (hour >= 10) {
+        document.getElementById("hour").innerHTML = hour;
+      } else {
+        document.getElementById("hour").innerHTML = "0" + hour;
+      }
+      if (hour >= 12) {
+        hour = 1;
+      }
+    }
+    function mincount() {
+      min++;
+      if (min >= 10) {
+        document.getElementById("sec").innerHTML = min;
+      } else {
+        document.getElementById("sec").innerHTML = "0" + min;
+      }
+      if (min == 60) {
+        min = 0;
+      }
+    }
+
+    function seccount() {
+      sec++;
+      if (sec >= 10) {
+        document.getElementById("sec").innerHTML = sec;
+      } else {
+        document.getElementById("sec").innerHTML = "0" + sec;
+      }
+      if (sec == 60) {
+        sec = 0;
+      }
+    }
+
+    function mscount() {
+      ms++;
+      if (ms >= 10) {
+        document.getElementById("msec").innerHTML = ms;
+      } else {
+        document.getElementById("msec").innerHTML = "0" + ms;
+      }
+      if (ms == 60) {
+        ms = 0;
+      }
+    }
+
+    function startbtn() {
+      htimer = setInterval(hourcount, 1000 * 3600);
+      mintimer = setInterval(mincount, 1000 * 60);
+      sectimer = setInterval(seccount, 1000);
+      mstimer = setInterval(mscount, 1);
+    }
+    function stopbtn() {
+      clearInterval(htimer);
+      clearInterval(mintimer);
+      clearInterval(sectimer);
+      clearInterval(mstimer);
+    }
+    function resetbtn() {
+      clearInterval(htimer);
+      clearInterval(mintimer);
+      clearInterval(sectimer);
+      clearInterval(mstimer);
+
+      document.getElementById("hour").innerHTML = "00";
+      document.getElementById("min").innerHTML = "00";
+      document.getElementById("sec").innerHTML = "00";
+      document.getElementById("msec").innerHTML = "00";
+      lbl2.innerHTML = "";
+      num = 0;
+    }
+    var i = [];
+    function lapbtn() {
+      num++;
+      // i.unshift("("+num+")" +hour+":"+min+":"+sec+":"+ms+"<br>");
+      var lap =
+        "(" + num + ")" + hour + ":" + min + ":" + sec + ":" + ms + "<br>";
+      lbl2.innerHTML = lap + lbl2.innerHTML;
+    }
+  </script>
+</html>
