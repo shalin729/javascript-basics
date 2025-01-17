@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bulb">
+        <div id="img" class="img">
+            <div id="on" class="on">
+
+            </div>
+        </div>
+        <div class="base"></div>
+        <button class="btn">On</button>
+    </div>
+</body>
+<script>
+    let bulb = document.querySelector('.img');
+    let button = document.querySelector('.btn');
+    let on = document.querySelector('.on');
+    let a = false;
+    button.addEventListener('click', function(){
+        if(a==false){
+            on.style.opacity = "1";
+            // on.classList.add("onn");
+            button.textContent = "Off";
+            a=true;
+        }else{
+            on.style.opacity = "0";
+            // on.classList.remove("onn");
+            button.textContent = "On";
+
+            a=false;
+        }
+        
+    })
+</script>
+</html>
