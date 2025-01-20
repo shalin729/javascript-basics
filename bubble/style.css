@@ -1,0 +1,164 @@
+*
+{
+    font-family: sans-serif;
+}
+body
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#con
+{
+    width: 1850px;
+    height: 800px;
+    /* background-color: #87b1d1; */
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.buble
+{
+    background-color: red;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    /* animation-name: timer; */
+    opacity: 100;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+@keyframes timer {
+   
+   0%
+   {
+        opacity: 100;
+   }
+   50%
+   {
+    opacity: 100;
+   }
+   60%
+   {
+    opacity: 0;
+   }
+   70%
+   {
+    opacity: 100;
+   }
+   80%
+   {
+    opacity: 0;
+   }
+   85%
+   {
+    opacity: 100;
+   }
+   90%
+   {
+    opacity: 0;
+   }
+   95%
+   {
+    opacity: 100;
+   }
+   100%
+   {
+    opacity: 0;
+   }
+}
+.buble p
+{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+button
+{
+    
+    margin: 5px auto;
+    width: 150px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #22d3ff;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    transition: 0.3s;
+    margin: 5px;
+    
+}
+button:hover
+{
+     /* box-shadow: #36354b 3px 3px 6px 0px inset, #68668f -3px -3px 6px 1px inset; */
+     scale: 0.9;
+}
+.row
+{
+    margin: auto;
+    /* border: solid 1px black; */
+    width: 1850px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-color: gray;
+    border-radius: 10px;
+    /* padding: 0 10px; */
+}
+.btn, .score, .logo
+{
+    width: 32%;
+    display: flex;
+    justify-content: center;
+}
+.score
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 0px;
+    
+}
+.score div
+{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    /* background-color: green; */
+}
+p
+{
+    margin: 0px;
+    color: #d3d4d4;
+}
+span
+{
+    font-weight: bolder;
+    font-size: 35px;
+}
+h1
+{
+    color: white;
+    text-transform: uppercase;
+}

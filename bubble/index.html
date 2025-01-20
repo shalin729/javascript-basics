@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buble game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="row">
+
+        <div class="logo">
+            <h1>buble game</h1>
+            <audio autoplay id="bbl" src=""></audio>
+        </div>
+
+        <div class="btn">
+            <button id="st" onclick="startfun()">Start</button>  
+            <button onclick="resetfun()">Reset</button>   
+        </div>
+        
+        <div class="score">
+            <div class="scr">
+                <p>Score = </p>&nbsp<label id="lblscr">0000</label>
+            </div>
+            <span>&nbsp&nbsp</span>
+            
+        </div>
+        
+    </div>
+    <!-- <div id="con">
+
+    </div> -->
+
+</body>
+<script>
+
+
+    //number, rendom num, rendom ch, rendom bg color, rendom position
+    var start = false;
+    var timer,rcolor;
+    var color = '#';
+    count = 0;
+    pop = 0;
+    // const cont1 = document.getElementById('con');
+    var key = null;
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var charactersLength = characters.length;
+
+function funOne()
+{
+    // creat a buble
+    var buble = document.createElement("div");
+    buble.className = "buble";
+    document.body.appendChild(buble) ;
+    count++
+
+    // genrate a rendom characters
+    let result = '';
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    buble.innerHTML = result;
+    buble.id = result;
+   
+
+    // genrate random position
+    var x = 0,y = 0;
+    x = Math.floor(Math.random()*1750);
+    y = Math.floor(Math.random()*700);
+    buble.style.marginTop = y+"px";
+    buble.style.marginLeft = x+"px";
+
+
+    
+    // genrate random color
+    color = "#";
+  var letters = '0123456789ABCDEF';
+  for (var i = 0; i < 6; i++) 
+  {
+    color += letters[Math.floor(Math.random() * letters.length)];
+  }
+    buble.style.backgroundColor = color;
+    // console.log(color);
+    
+    // buble pop code-------------
+    document.body.addEventListener('keyup', function(){
+        
+        //   alert("hello");
+        
+        key = event.key.toUpperCase();
+        var e = document.getElementById(key);
+        
+        var sp_code = e.innerHTML.charAt(0);
+        console.log(sp_code+"="+key);
+        
+        
+        if(sp_code == key){
+            document.body.removeChild(e);
+            bbl.src = "buble.wav";
+            pop++;
+            lblscr.innerHTML = pop;
+            count--;
+          }
+      })
+      
+      console.log(count);
+if(count == 11)
+{
+    clearInterval(timer);
+    // alert("Game Over");
+    document.body.style.backgroundImage = "url(gameover.jpg)"
+}
+
+    // document.body.addEventListener('keyup', function (event) {
+    // const key = event.key.toUpperCase(); 
+    // const bubble = document.getElementById(key); 
+
+    // if (bubble) { 
+    //     const bubbleChar = bubble.textContent.trim(); 
+    //     if (bubbleChar === key) { 
+    //         document.body.removeChild(bubble); 
+    //     }
+    // }
+    // });
+}
+
+
+
+
+
+function startfun()
+{
+    if(start==false){
+        timer = setInterval(funOne, 2000);
+        start = true;
+        st.innerHTML = "stop";
+    }else{
+        clearInterval(timer);
+        start = false;
+        st.innerHTML = "start";
+    }
+   
+}  
+
+function resetfun()
+{
+    
+}
+
+
+
+
+
+</script>
+</html>
